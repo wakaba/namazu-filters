@@ -1,4 +1,10 @@
+2002-12-31  Wakaba  <w@suika.fam.cx>
 
+	* suikawiki.pl: New filter.
+
+2002-11-24  Wakaba  <w@suika.fam.cx>
+
+	* mp3.pl: New filter.
 
 2001-11-30  wakaba <wakaba@suika.fam.cx>
 
@@ -11,5 +17,3 @@
 2001-11-09  wakaba <wakaba@suika.fam.cx>
 
 	* comchat.pl: new.
-
-;; ChangeLog ends here
