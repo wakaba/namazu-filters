@@ -19,7 +19,7 @@ sub mediatype() {
 
 sub add_magic ($) {
     my ($magic) = @_;
-    #$magic->addSpecials("application/x-comchat-log", "<>.*<>.*<>.*<>.*<>");
+    $magic->addSpecials("application/x-comchat-log", "<>.*<>.*<>.*<>.*<>");
     $magic->addFileExts('\\.comchat$', 'application/x-comchat-log');
     return;
 }
