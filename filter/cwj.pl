@@ -31,11 +31,7 @@ sub mediatype() {
 }
 
 sub status() {
-    if (defined util::checkcmd('nkf')) {
-        return 'yes';
-    } else {
-        return 'no';
-    }
+    return 'yes';
 }
 
 sub recursive() {
@@ -67,15 +63,8 @@ sub filter ($$$$$) {
 
     util::vprint("Processing Craris Works 4 document...\n");
 
-    #cwj_filter($cont, $weighted_str, $fields);
+    cwj_filter($cont, $weighted_str, $fields);
 
-    {
-        use NKF;
-        $$cont = nkf("-Se", $$cont);
-        $$cont =~ s/[\x0D\x0A\x20]+/\x20/g;
-        $$cont =~ s/[\x00-\x1F\x7F-\xA0\xFF]+//g;
-    }
-    
     gfilter::line_adjust_filter($cont);
     gfilter::line_adjust_filter($weighted_str);
     gfilter::white_space_adjust_filter($cont);
@@ -93,6 +82,8 @@ sub cwj_filter ($$$) {
     $t =~ s{((?:(?:[\x81-\xFC][\x40-\x7E\x80-\xFC])+|(?:[\x20-\x7E]+))+)}{
       $r .= $1;
     }gesx;
+    #use Jcode;
+    #Jcode::convert(\$r,'euc','sjis');
     $$contref = $r;
 }
 
