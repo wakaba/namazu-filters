@@ -1,3 +1,7 @@
+2003-09-04  Wakaba  <wakaba@suika.fam.cx>
+
+	* mp3.pl: Removed since official version is added to official package.
+
 2002-12-31  Wakaba  <w@suika.fam.cx>
 
 	* suikawiki.pl: New filter.
