@@ -19,7 +19,7 @@ sub mediatype() {
 
 sub add_magic ($) {
     my ($magic) = @_;
-    $magic->addSpecials("application/x-comchat-log", "<>.*<>.*<>.*<>.*<>");
+    #$magic->addSpecials("application/x-comchat-log", "<>.*<>.*<>.*<>.*<>");
     $magic->addFileExts('\\.comchat$', 'application/x-comchat-log');
     return;
 }
@@ -33,11 +33,11 @@ sub recursive() {
 }
 
 sub pre_codeconv() {
-    return 0;
+    return 1;
 }
 
 sub post_codeconv () {
-    return 1;
+    return 0;
 }
 
 sub filter ($$$$$) {
@@ -97,12 +97,8 @@ Copyright wakaba 2001  All rights reserved.
 #  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA
 #  02111-1307, USA
 
-=head1 CHANGE
-
-2001-11-09  wakaba <wakaba@suika.fam.cx>
-
-	* new.
-
 =cut
 
 1;
+
+## comchat.pl ends here
