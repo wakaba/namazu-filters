@@ -72,8 +72,8 @@ sub filter ($$$$$) {
     {
         use NKF;
         $$cont = nkf("-Se", $$cont);
-        $$contref =~ s/[\x0D\x0A\x20]+/\x20/g;
-        $$contref =~ s/[\x00-\x1F\x7F-\xA0\xFF]+//g;
+        $$cont =~ s/[\x0D\x0A\x20]+/\x20/g;
+        $$cont =~ s/[\x00-\x1F\x7F-\xA0\xFF]+//g;
     }
     
     gfilter::line_adjust_filter($cont);
