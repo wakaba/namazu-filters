@@ -1,0 +1,15 @@
+
+
+2001-11-30  wakaba <wakaba@suika.fam.cx>
+
+	* comchat.pl (pre_codeconv): set 1.
+	(post_codeconv): set 0.
+	
+	* comchat.pl (CHANGE): removed.
+	* ChangeLog: new.
+
+2001-11-09  wakaba <wakaba@suika.fam.cx>
+
+	* comchat.pl: new.
+
+;; ChangeLog ends here
