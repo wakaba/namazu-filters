@@ -7,6 +7,8 @@
 	
 	* comchat.pl (CHANGE): removed.
 	* ChangeLog: new.
+	
+	* cwj.pl (filter): use NKF.pm.
 
 2001-11-09  wakaba <wakaba@suika.fam.cx>
 
